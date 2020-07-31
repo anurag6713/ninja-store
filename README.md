@@ -1,7 +1,7 @@
 # sharedState
 Create reusable state for your react components
 
-`npm i react-shared-state -S`
+`npm i ninja-store -S`
 
 ## State Model
 ```js

@@ -1,5 +1,5 @@
 {
-  "name": "react-shared-state",
+  "name": "ninja-store",
   "version": "1.0.0",
   "description": "Create reusable state for your react components",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anurag6713/sharedState.git"
+    "url": "git+https://github.com/anurag6713/ninja-store.git"
   },
   "keywords": [
     "react",
@@ -21,7 +21,7 @@
   "author": "Anurag Shivarathri <anurag6713@gmail.com> (https://github.com/anurag6713)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anurag6713/sharedState/issues"
+    "url": "https://github.com/anurag6713/ninja-store/issues"
   },
-  "homepage": "https://github.com/anurag6713/sharedState#readme"
+  "homepage": "https://github.com/anurag6713/ninja-store#readme"
 }
