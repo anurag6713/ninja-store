@@ -1,0 +1,27 @@
+{
+  "name": "sharedstate",
+  "version": "1.0.0",
+  "description": "Create reusable state for your react components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anurag6713/sharedState.git"
+  },
+  "keywords": [
+    "react",
+    "reusable",
+    "state",
+    "common",
+    "shared",
+    "reducer"
+  ],
+  "author": "Anurag Shivarathri <anurag6713@gmail.com> (https://github.com/anurag6713)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anurag6713/sharedState/issues"
+  },
+  "homepage": "https://github.com/anurag6713/sharedState#readme"
+}
