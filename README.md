@@ -1,7 +1,7 @@
 # sharedState
 Create reusable state for your react components
 
-`npm i sharedState -S`
+`npm i react-shared-state -S`
 
 ## State Model
 ```js
