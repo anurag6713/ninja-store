@@ -1,5 +1,5 @@
-# sharedState
-Create reusable state for your react components
+# Ninja Store
+Create reusable state for your react components.
 
 `npm i ninja-store -S`
 
@@ -7,7 +7,7 @@ Create reusable state for your react components
 ```js
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import {createStore} from './utils';
+import {createStore} from 'ninja-store';
 
 const INITIAL_STATE = {
     count: 0
@@ -66,7 +66,7 @@ export default App;
 ```js
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import {createStore} from './utils';
+import {createStore} from 'ninja-store';
 
 const INITIAL_STATE = {
     count: 0
