@@ -2,7 +2,7 @@ import React from 'react';
 
 import stores from './stores';
 
-function createStore(name, reducer, initialState = {}) {
+function createStore(name, reducer, initialState = {}, timeoutDuration) {
     const isReducerMode = typeof reducer === 'function';
     stores[name] = {
         state: isReducerMode ? initialState : reducer,
@@ -66,15 +66,25 @@ function createStore(name, reducer, initialState = {}) {
                 );
                 const oldState = store.state;
                 store.state = newState;
-                timeout && clearTimeout(timeout);
-                timeout = setTimeout(() => {
-                    store.listeners.forEach(({updateState}) => {
-                        updateState(newState, oldState);
-                    });
+                timeoutDuration && timeout && clearTimeout(timeout);
+                timeoutDuration && (
+                    timeout = setTimeout(() => {
+                        update(newState, oldState);
+                    }, timeoutDuration)
+                ) || update(newState, oldState);
+            }, []);
+
+            const update = React.useCallback((newState, oldState) => {
+                store.listeners.forEach(({updateState}) => {
+                    updateState(newState, oldState);
                 });
             }, []);
+
+            const getState = React.useCallback(() => {
+                return store.state;
+            }, []);
         
-            return [state, dispatch]
+            return [state, dispatch, getState];
         }
     };
 }
