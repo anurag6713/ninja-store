@@ -34,4 +34,6 @@ declare module 'ninja-store' {
         ]
     }
 
+    export const stores: IGenericObject;
+
 }
