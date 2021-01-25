@@ -25,12 +25,12 @@ declare module 'ninja-store' {
             mapFn?: (state: T) => IGenericObject
         ): [
             state: T,
-            setState?: (
+            setState: (
                 action?: string | 
                 ((state: T) => T) | 
                 T
             ) => void,
-            getState ?: () => T
+            getState: () => T
         ]
     }
 
