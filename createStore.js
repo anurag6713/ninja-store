@@ -52,11 +52,16 @@ function createStore(name, reducer, initialState = {}, timeoutDuration) {
                 });
             }, []);
 
+            // Add current hook into the listeners
+            const key = React.useRef(null);
+            if (key.current === null) {
+                key.current = Math.random();
+                store.listeners.push({key: key.current, updateState});
+            }
+
             React.useEffect(() => {
-                const key = Math.random();
-                store.listeners.push({key, updateState});
                 return () => {
-                    store.listeners = store.listeners.filter((item) => item.key !== key);
+                    store.listeners = store.listeners.filter((item) => item.key !== key.current);
                 };
             }, []);
 
